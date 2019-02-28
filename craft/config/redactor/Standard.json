@@ -1,0 +1,36 @@
+{
+	"buttons": ["format","bold","italic","lists","link","file","horizontalrule", "image","undo","redo"],
+	"plugins": ["source","inlinestyles","video","table","alignment"],
+	"toolbarFixed": true,
+	"replaceDivs": false,
+    "linebreaks": true,
+    "enterKey": false,
+	"buttonsAdd": {
+	    "yellow": {
+	      "title": "Yellow",
+	      "args": ["mark","class","yellow"]
+	    },
+	   	"blue": {
+	      "title": "Blue",
+	      "args": ["mark","class","blue"]
+	    },
+	   	"green": {
+	      "title": "Green",
+	      "args": ["mark","class","green"]
+	    },
+	   	"orange": {
+	      "title": "Orange",
+	      "args": ["mark","class","orange"]
+	    },
+	   	"peach": {
+	      "title": "Peach",
+	      "args": ["mark","class","peach"]
+	    },
+	   	"red": {
+	      "title": "Red",
+	      "args": ["mark","class","red"]
+	    }
+	}
+}
+
+

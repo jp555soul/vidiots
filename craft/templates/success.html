@@ -1,0 +1,46 @@
+{#
+ # Success template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+  	<div class="container-fluid">
+  		<div class="reset">
+  			<div class="row pt-5">
+  				<div class="col">
+  					<a href="{{ siteUrl }}"><img src="{{ siteUrl }}assets/images/logo_dance.gif" class="img-fluid mx-auto d-block"/></a>
+  				</div>
+  			</div>
+  			<div class="row justify-content-md-center mt-10">
+  				<div class="col-md-auto">
+  					<h2>success! <span class="green">thank you</span> &amp; <span class="blue">we</span> will reach out soon.</h2>
+  				</div>
+  			</div>
+			<div class="row justify-content-md-center mt-1">
+				<div class="col-md-4">
+					<ul class="list-inline d-flex">
+						<!-- <li class="list-inline-item"><a href="/privacypolicy.html" class="blue">PRIVACY POLICY</a></li>
+						<li class="list-inline-item mx-auto"><a href="/termsofservice.html" class="blue">TERMS OF SERVICE</a></li> -->
+						<li class="list-inline-item mx-auto blue">&copy;{{ now.year }}. {{ siteName }}</li>
+					</ul>
+				</div>
+			</div>
+  		</div>
+	</div>
+{% endblock %}

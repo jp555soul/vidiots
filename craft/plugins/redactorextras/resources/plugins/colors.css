@@ -1,0 +1,23 @@
+.redactor-styles mark.green{
+	background-color:#aeea5f !important;
+}
+
+.redactor-styles mark.blue{
+	background-color:#00c3ff !important;
+}
+
+.redactor-styles mark.yellow{
+	background-color:#FFFF39 !important;
+}
+
+.redactor-styles mark.orange{
+	background-color:#FFB542 !important;
+}
+
+.redactor-styles mark.peach{
+	background-color:#FFDEF7 !important;
+}
+
+.redactor-styles mark.red{
+	background-color:#f92a53 !important;
+}
