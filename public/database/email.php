@@ -1,19 +1,15 @@
 <?php
 
-//Prod 
-// $fail = "/fail";
-// $success = "/success";
-
-//Local
 $fail = "../fail";
 $success = "../success";
 
 if(isset($_POST['email'])) {
-    $day = date('l');
+    $day = date('n/j/Y');
     $email = $_POST['email'];
-    $data = $_POST['email'] . " - ".$day."\r\n";
+    $data = $day . " - " .$_POST['email'] . "\r\n";
+
     if (check_email_address($email)) {
-       $ret = file_put_contents('../database/emails.txt', $data, FILE_APPEND | LOCK_EX);
+       $ret = file_put_contents('../database/email/emails.txt', $data, FILE_APPEND | LOCK_EX);
         if($ret === false) {
             echo '<META HTTP-EQUIV="Refresh" Content="0; URL='.$fail.'">';
             exit;
