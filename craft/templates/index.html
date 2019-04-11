@@ -34,27 +34,32 @@
           <div class="row mt-3 mx-auto">
             <div class="col-12">
               <h2>{{ entry.body }}</h2>
-              <!-- <h2>AN <span class="yellow">INCLUSIVE</span>, <span class="blue">ONE-OF-A-KIND</span> HUB FOR <span class="green">FILM LOVERS</span>, <span class="orange">FILMMAKERS</span>, <span class="yellow">AND ANYONE CURIOUS ABOUT CINEMA</span>, VIDIOTS IS BRINGING VIDEO STORE CULTURE INTO THE 21ST CENTURY!</h2>
-              
-              <h2>FOUNDED IN <span class="number">1985</span>, VIDIOTS IS DEDICATED TO <span class="green">PRESERVING</span>, <span class="blue">GROWING</span>, AND <span class="orange">PROVIDING ACCESS</span> TO OUR DIVERSE, <span class="number red">50,000+</span> TITLE DVD, BLURAY, AND RARE VHS LIBRARY. WE SHOWCASE THE WORK OF <span class="blue">EMERGING</span> AND <span class="yellow">MASTER ARTISTS</span>, AND PRODUCE UNIQUE FILM EDUCATION PROGRAMS AND EVENTS. COMING SOON: VIDIOTS WILL RELAUNCH ITS BRICK-AND-MORTAR AS AN EXPANDED FILM SPACE IN LOS ANGELES.</h2>
-
-              <h2><span class="blue">JOIN OUR</span> <span class="red">MAILING LIST</span> <span class="blue">AND FOLLOW US ON OUR</span> SOCIAL ACCOUNTS FOR EVENTS, PROGRAMMING, AND UPDATES.</h2> -->
             </div>
           </div>
           <div class="row mx-auto mt-5">
             <div class="col-12">
-              <div class="input-group has-warning has-feedback mb-3">
-                <form class="input-group" action="{{ siteUrl }}database/email.php" method="POST">
-                  <input name="email" type="email" class="form-control is-invalid" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="E-MAIL" multiple required>
-                  <button class="btn btn-primary" type="submit">Sign me up!</button>
-                  <div class="valid-feedback">Looks good!</div>
-                </form>
-              </div>
+              <form class="input-group" action="{{ siteUrl }}database/email.php" method="POST">
+                <div class="input-group has-warning has-feedback mb-3">
+                  <input name="first_name" type="text" class="form-control is-invalid" aria-label="First Name" aria-describedby="inputGroup-sizing-sm" placeholder="FIRST NAME" multiple required>
+                </div>
+                <div class="input-group has-warning has-feedback mb-3">
+                  <input name="last_name" type="text" class="form-control is-invalid" aria-label="Last Name" aria-describedby="inputGroup-sizing-sm" placeholder="LAST NAME" multiple required>
+                </div>
+                <div class="input-group has-warning has-feedback mb-3">
+                  <input name="email" type="email" class="form-control is-invalid" aria-label="E-MAIL" aria-describedby="inputGroup-sizing-sm" placeholder="E-MAIL" multiple required>
+                </div>
+                <div class="row mx-auto">
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Sign me up!</button>
+                    <div class="valid-feedback">Looks good!</div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
           <div class="row mx-auto mt-1">
-            <div class="col-12 col-xl-10 mt-3 mx-auto">
-              <h3>Vidiots is a registered 501(c)3 non-profit. For questions email: <a href="mailto:info@vidiotsfoundation.org?Subject=Vidiots%20interest" target="_top">info@vidiotsfoundation.org</a></h3>
+            <div class="col-12 col-xl-10 mt-3">
+              <h3 class="text-center">Vidiots is a registered 501(c)3 non-profit. For questions email: <a href="mailto:info@vidiotsfoundation.org?Subject=Vidiots%20interest" target="_top">info@vidiotsfoundation.org</a></h3>
             </div>
           </div>
           <div class="row mx-auto mt-3">

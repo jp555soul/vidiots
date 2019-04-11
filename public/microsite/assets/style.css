@@ -178,11 +178,11 @@ form{
 	color:#f92a53;
 }
 
-input[type="email"]{
+input[type="email"], input[type="text"]{
 	text-align: center;
 }
 
-input[type="email"]::placeholder{
+input[type="email"]::placeholder, input[type="text"]::placeholder{
 	color: #ffb33f;
 }
 
@@ -191,7 +191,6 @@ button[type="submit"]{
 	background-color: #FF93CE;
 	border: none;
 	border-radius: 3px;
-	margin:0 0 0 10px;
 }
 
 .custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
