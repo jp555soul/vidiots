@@ -14,14 +14,28 @@
 {% set title = "News" %}
 
 {% block content %}
-	<h1>News</h1>
-
-	{% for entry in craft.entries.section('news').find() %}
-		<article>
-			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-			<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-			{{ entry.body.getPage(1) }}
-			<p><a href="{{ entry.url }}">Continue reading</a></p>
-		</article>
-	{% endfor %}
+<div class="container-fluid">
+	<div class="reset">
+		<div class="row">
+			<div class="col-sm-6 col-12 py-2 d-flex align-items-center justify-content-center" id="logo-col">
+		        <a href="{{ siteUrl }}"><img src="{{ siteUrl }}assets/images/logo_dance.gif" class="img-fluid"/></a>
+		    </div>
+		    <div class="col-sm-6 col-12 offset-0 offset-sm-6 py-2">
+		        <div id="content-col">
+					{% for entry in craft.entries.section('news').find() %}
+						<article>
+							{% for image in entry.blogPostImages %}
+								<img src="{{ image.getUrl() }}" alt="{{ image.title }}">
+							{% endfor %}
+							<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+							<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+							<p>{{ entry.blogPostSummary }}</p>
+							<p><a href="{{ entry.url }}">Continue reading</a></p>
+						</article>
+					{% endfor %}
+		        </div>
+		    </div>
+	    </div>
+    </div>	
+</div>
 {% endblock %}

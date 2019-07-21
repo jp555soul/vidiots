@@ -197,6 +197,23 @@ button[type="submit"]{
     border-color: #ffb33f;
 }
 
+#logo-col{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+}
+
+#content-col {
+}
+
+article{
+	color: #fff;
+}
+
+article h3{
+	font-size: 28px;
+}
+
 
 .footer li{
 	padding: 0;

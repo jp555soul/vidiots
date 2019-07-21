@@ -4,7 +4,7 @@
 	"toolbarFixed": true,
 	"replaceDivs": false,
     "linebreaks": true,
-    "enterKey": false,
+    "enterKey": true,
 	"buttonsAdd": {
 	    "yellow": {
 	      "title": "Yellow",

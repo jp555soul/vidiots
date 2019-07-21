@@ -1211,8 +1211,13 @@ class CController extends CBaseController
 			{
 				if(extension_loaded('zlib'))
 					$data=@gzuncompress($data);
-				if(($data=Yii::app()->getSecurityManager()->validateData($data))!==false)
-					return unserialize($data);
+				if(($data=Yii::app()->getSecurityManager()->validateData($data))!==false) {
+					if (defined('PHP_VERSION_ID') && PHP_VERSION_ID >= 70000) {
+						return @unserialize($data, array('allowed_classes' => false));
+					} else {
+						return @unserialize($data);
+					}
+				}
 			}
 		}
 		return array();
