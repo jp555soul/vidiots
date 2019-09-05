@@ -20,77 +20,69 @@
 {% extends "_layout" %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="reset">
-      <div class="row mt-6">
-        <div class="col-sm">
-          <div class="row mt-7">
-            <div class="col">
-              <a href="{{ siteUrl }}"><img src="{{ siteUrl }}assets/images/logo_dance.gif" class="img-fluid mx-auto d-block"/></a>
-            </div>
-      		</div>
-        </div>
-        <div class="col-sm-7">
-          <div class="row mt-3 mx-auto">
-            <div class="col-12">
-              <h2>{{ entry.body }}</h2>
-            </div>
+    <div class="row mt-4">
+      <div class="col-sm-5 col-12 py-2 d-flex align-items-center justify-content-center mt-6" id="logo-col">
+          <a href="{{ siteUrl }}"><img src="{{ siteUrl }}assets/images/logo_dance.gif" class="img-fluid"/></a>
+      </div>
+      <div class="col-sm-7 col-12 offset-0 offset-sm-5">
+        <div class="row mt-3 mx-auto">
+          <div class="col-12">
+            <h2>{{ entry.body }}</h2>
           </div>
-          <div class="row mx-auto mt-5">
-            <div class="col-12">
-              <form class="input-group email-form" action="{{ siteUrl }}database/email.php" method="POST">
-                <div class="input-group has-warning has-feedback mb-3">
-                  <input name="first_name" type="text" class="form-control is-invalid" aria-label="First Name" aria-describedby="inputGroup-sizing-sm" placeholder="FIRST NAME" multiple required>
+        </div>
+        <div class="row mx-auto mt-5">
+          <div class="col-12">
+            <form class="input-group email-form" action="{{ siteUrl }}database/email.php" method="POST">
+              <div class="input-group has-warning has-feedback mb-3">
+                <input name="first_name" type="text" class="form-control is-invalid" aria-label="First Name" aria-describedby="inputGroup-sizing-sm" placeholder="FIRST NAME" multiple required>
+              </div>
+              <div class="input-group has-warning has-feedback mb-3">
+                <input name="last_name" type="text" class="form-control is-invalid" aria-label="Last Name" aria-describedby="inputGroup-sizing-sm" placeholder="LAST NAME" multiple required>
+              </div>
+              <div class="input-group has-warning has-feedback mb-3">
+                <input name="email" type="email" class="form-control is-invalid" aria-label="E-MAIL" aria-describedby="inputGroup-sizing-sm" placeholder="E-MAIL" multiple required>
+              </div>
+              <div class="input-group has-warning has-feedback mb-3">
+                <div class="mx-auto">
+                  <div class="g-recaptcha" data-sitekey="6LexQ6oUAAAAAPR2aEek1PjBJUitBbZwMJgarUZp"></div>
                 </div>
-                <div class="input-group has-warning has-feedback mb-3">
-                  <input name="last_name" type="text" class="form-control is-invalid" aria-label="Last Name" aria-describedby="inputGroup-sizing-sm" placeholder="LAST NAME" multiple required>
-                </div>
-                <div class="input-group has-warning has-feedback mb-3">
-                  <input name="email" type="email" class="form-control is-invalid" aria-label="E-MAIL" aria-describedby="inputGroup-sizing-sm" placeholder="E-MAIL" multiple required>
-                </div>
-                <div class="input-group has-warning has-feedback mb-3">
-                  <div class="mx-auto">
-                    <div class="g-recaptcha" data-sitekey="6LexQ6oUAAAAAPR2aEek1PjBJUitBbZwMJgarUZp"></div>
-                  </div>
-                </div>
-                <div class="row mx-auto">
-                  <button class="btn btn-primary btn-lg" type="submit">Sign me up!</button>
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
+              </div>
+              <div class="row mx-auto">
+                <button class="btn btn-primary btn-lg" type="submit">Sign me up!</button>
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-2 mx-auto">         
+            <div class="ml-3"> 
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="4KJ5GRT7YC2FJ" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
               </form>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-2 mx-auto">         
-              <div class="ml-3"> 
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                  <input type="hidden" name="cmd" value="_s-xclick" />
-                  <input type="hidden" name="hosted_button_id" value="4KJ5GRT7YC2FJ" />
-                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                  <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                </form>
-              </div>
-            </div>
+        </div>
+        <div class="row mx-auto mt-1">
+          <div class="col-12 col-xl-10 mt-3">
+            <h3 class="text-center">Vidiots is a registered 501(c)3 non-profit. For questions email: <a href="mailto:info@vidiotsfoundation.org?Subject=Vidiots%20interest" target="_top">info@vidiotsfoundation.org</a></h3>
           </div>
-          <div class="row mx-auto mt-1">
-            <div class="col-12 col-xl-10 mt-3">
-              <h3 class="text-center">Vidiots is a registered 501(c)3 non-profit. For questions email: <a href="mailto:info@vidiotsfoundation.org?Subject=Vidiots%20interest" target="_top">info@vidiotsfoundation.org</a></h3>
-            </div>
-          </div>
-          <div class="row mx-auto mt-3">
-            <ul class="list-inline mx-auto">
-               <li class="list-inline-item"><a class="social-icon img-fluid text-xs-center" target="_blank" href="https://www.facebook.com/vidiotsvideo/"><img src="{{ siteUrl }}assets/icons/fbook_black.png" alt="Facebook" /></a></li>
-               <li class="list-inline-item"><a class="social-icon img-fluid text-xs-center" target="_blank" href="https://twitter.com/vidiots"><img src="{{ siteUrl }}assets/icons/tweet_black.png" alt="Twitter" /></a></li>
-               <li class="list-inline-item"><a class="social-icon img-fluid text-xs-center" target="_blank" href="https://www.instagram.com/vidiots/"><img src="{{ siteUrl }}assets/icons/gram_black.png" alt="Instagram" /></a></li>
-            </ul>
-          </div>
-          <div class="row mx-auto">
-            <ul class="list-inline mx-auto">
-              <li class="list-inline-item mx-auto blue">&copy;{{ now.year }}. {{ siteName }}</li>
-            </ul>
-          </div>
+        </div>
+        <div class="row mx-auto mt-3">
+          <ul class="list-inline mx-auto">
+             <li class="list-inline-item"><a class="social-icon img-fluid text-xs-center" target="_blank" href="https://www.facebook.com/vidiotsvideo/"><img src="{{ siteUrl }}assets/icons/fbook_black.png" alt="Facebook" /></a></li>
+             <li class="list-inline-item"><a class="social-icon img-fluid text-xs-center" target="_blank" href="https://twitter.com/vidiots"><img src="{{ siteUrl }}assets/icons/tweet_black.png" alt="Twitter" /></a></li>
+             <li class="list-inline-item"><a class="social-icon img-fluid text-xs-center" target="_blank" href="https://www.instagram.com/vidiots/"><img src="{{ siteUrl }}assets/icons/gram_black.png" alt="Instagram" /></a></li>
+          </ul>
+        </div>
+        <div class="row mx-auto">
+          <ul class="list-inline mx-auto">
+            <li class="list-inline-item mx-auto blue">&copy;{{ now.year }}. {{ siteName }}</li>
+          </ul>
         </div>
       </div>
     </div>
-</div>
 {% endblock %}

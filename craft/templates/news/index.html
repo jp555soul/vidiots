@@ -14,28 +14,36 @@
 {% set title = "News" %}
 
 {% block content %}
-<div class="container-fluid">
-	<div class="reset">
-		<div class="row">
-			<div class="col-sm-6 col-12 py-2 d-flex align-items-center justify-content-center" id="logo-col">
-		        <a href="{{ siteUrl }}"><img src="{{ siteUrl }}assets/images/logo_dance.gif" class="img-fluid"/></a>
-		    </div>
-		    <div class="col-sm-6 col-12 offset-0 offset-sm-6 py-2">
-		        <div id="content-col">
-					{% for entry in craft.entries.section('news').find() %}
-						<article>
-							{% for image in entry.blogPostImages %}
-								<img src="{{ image.getUrl() }}" alt="{{ image.title }}">
-							{% endfor %}
-							<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-							<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-							<p>{{ entry.blogPostSummary }}</p>
-							<p><a href="{{ entry.url }}">Continue reading</a></p>
-						</article>
-					{% endfor %}
-		        </div>
-		    </div>
+	<div class="row mt-6">
+		<div class="col-sm-5 col-12 py-2 d-flex align-items-center justify-content-center mt-6" id="logo-col">
+	        <a href="{{ siteUrl }}"><img src="{{ siteUrl }}assets/images/logo_dance.gif" class="img-fluid"/></a>
 	    </div>
-    </div>	
-</div>
+	    <div class="col-sm-7 col-12 offset-0 offset-sm-5">
+	        <div id="content-col">
+				{% for entry in craft.entries.section('news').find() %}
+					<article>
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-6">
+									{% for image in entry.blogPostImages %}
+										<div class="img-container">
+											<a href="{{ entry.url }}"><img src="{{ image.getUrl() }}" alt="{{ image.title }}"></a>
+										</div>
+									{% endfor %}
+								</div>
+								<div class="col-sm-6 mt-5">
+									<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+									<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+									<div class="blog-summary">
+										<p>{{ entry.blogPostSummary }}</p>
+										<p><a href="{{ entry.url }}">Continue reading</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				{% endfor %}
+	        </div>
+	    </div>
+    </div>
 {% endblock %}

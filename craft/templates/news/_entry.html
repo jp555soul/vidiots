@@ -16,9 +16,38 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<article>
-		<h1>{{ entry.title }}</h1>
-		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-		{{ entry.body }}
-	</article>
+	<div class="row mt-5">
+		<div class="col-sm-5 col-12 py-2 d-flex align-items-center justify-content-center mt-6" id="logo-col">
+	        <a href="{{ siteUrl }}"><img src="{{ siteUrl }}assets/images/logo_dance.gif" class="img-fluid"/></a>
+	    </div>
+		<div class="col-sm-7 col-12 offset-0 offset-sm-5">
+			<div class="row mt-3 mx-auto">
+				<div class="col-12">
+					<article class="entry">
+						<h1>{{ entry.title }}</h1>
+						<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+						<img src='{{ entry.blogPostImages.first.getUrl() }}' />
+						<p>{{ entry.body }}</p>
+					</article>
+				</div>
+			</div>
+			<div class="row mx-auto mt-1">
+				<div class="col-12 col-xl-10 mt-3">
+					<h3 class="text-center">Vidiots is a registered 501(c)3 non-profit. For questions email: <a href="mailto:info@vidiotsfoundation.org?Subject=Vidiots%20interest" target="_top">info@vidiotsfoundation.org</a></h3>
+				</div>
+			</div>
+			<div class="row mx-auto mt-3">
+				<ul class="list-inline mx-auto">
+					<li class="list-inline-item"><a class="social-icon img-fluid text-xs-center" target="_blank" href="https://www.facebook.com/vidiotsvideo/"><img src="{{ siteUrl }}assets/icons/fbook_black.png" alt="Facebook" /></a></li>
+					<li class="list-inline-item"><a class="social-icon img-fluid text-xs-center" target="_blank" href="https://twitter.com/vidiots"><img src="{{ siteUrl }}assets/icons/tweet_black.png" alt="Twitter" /></a></li>
+					<li class="list-inline-item"><a class="social-icon img-fluid text-xs-center" target="_blank" href="https://www.instagram.com/vidiots/"><img src="{{ siteUrl }}assets/icons/gram_black.png" alt="Instagram" /></a></li>
+				</ul>
+			</div>
+			<div class="row mx-auto">
+				<ul class="list-inline mx-auto">
+					<li class="list-inline-item mx-auto blue">&copy;{{ now.year }}. {{ siteName }}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 {% endblock %}
