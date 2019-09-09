@@ -27,13 +27,13 @@
 								<div class="col-sm-6">
 									{% for image in entry.blogPostImages %}
 										<div class="img-container">
-											<a href="{{ entry.url }}"><img src="{{ image.getUrl() }}" alt="{{ image.title }}"></a>
+											<a href="{{ entry.url }}"><img src="{{ image.getUrl() }}" alt="{{ image.title }}" class="img-fluid"></a>
 										</div>
 									{% endfor %}
 								</div>
-								<div class="col-sm-6 mt-5">
+								<div class="col-sm-6 mt-2">
 									<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-									<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+									<p class="blog-date">Posted on {{ entry.postDate.format('F d, Y') }}</p>
 									<div class="blog-summary">
 										<p>{{ entry.blogPostSummary }}</p>
 										<p><a href="{{ entry.url }}">Continue reading</a></p>

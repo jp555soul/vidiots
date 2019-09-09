@@ -235,8 +235,7 @@ button[type="submit"]{
 }
 
 #logo-col{
-	position: fixed;
-	top: 0;
+	top: 30px;
 	bottom: 0;
 }
 
@@ -261,12 +260,12 @@ article h3 a:active:nth-child(2){
 }
 
 article .img-container{
-	width: 445px;
+	/*width: 445px;*/
 	overflow: hidden;
 }
 
 article img{
-	width: 450px;
+	/*width: 450px;*/
 	transition: left 0.3s ease-out,
 				top 0.3s ease-out,
   				width 0.3s ease-out,
@@ -291,6 +290,11 @@ article .blog-summary p{
 	letter-spacing: normal;
 	text-align: left;
 	font-family: sans-serif;
+}
+
+article .blog-date{
+	letter-spacing: normal;
+	margin: 0;
 }
 
 article.entry h1{
@@ -460,10 +464,9 @@ article.entry p{
 #menu-container #menu{
   position: absolute;
   width: 300px;
-  margin: -100px 0 0 -50px;
+  margin: -77px 0 0 -50px;
   padding: 50px;
-  padding-top: 125px;
-  
+  padding-top: 90px;
   background: transparent;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -496,6 +499,14 @@ article.entry p{
 
 	h2{
 		text-align: justify;
+	}
+
+	article .row h3{
+		margin: 0;
+	}
+
+	article .row h3 a{
+		font-size: 16px;
 	}
 
 /*	.mt-7{
@@ -534,6 +545,10 @@ article.entry p{
 		margin-top: 7rem!important;
 	}
 
+	#logo-col{
+		position: fixed;
+	}
+
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -555,6 +570,10 @@ article.entry p{
 		margin-top: 7rem!important;
 	}
 
+	#logo-col{
+		position: fixed;
+	}
+
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
@@ -570,6 +589,10 @@ article.entry p{
 
 	.mt-7{
 		margin-top: 7rem!important;
+	}
+
+	#logo-col{
+		position: fixed;
 	}
 }
 
